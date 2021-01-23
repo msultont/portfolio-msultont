@@ -26,6 +26,10 @@ export default () => {
           name="keywords"
           content="personal portfolio, sulton, muhammad sulton tauhid, sulton tauhid, muhammad sulton, sulton wibawa, web portfolio, software engineer, web developer, cto, direktur it, entrepreneur, wirausaha, programmer, bisnis, msultont, msulton55, universitas indonesia, ui, itb, its, cara membuat website portfolio, cara membuat website sederhana, belajar pemrograman website, belajar pemrograman dasar"
         />
+        <meta
+          name="google-site-verification"
+          content="tQhencibPXS5AjPXpY4KCm1wzeu6tdu6Vx-tJCIIlxM"
+        />
         <meta name="description" content={description || 'Gatsby Simplefolio'} />
         <meta property="og:title" content={title} />
         <meta property="og:url" content="https://www.msultont.com" />
