@@ -16,7 +16,7 @@ export const heroData = {
 
 // ABOUT DATA
 export const aboutData = {
-  img: 'my-photo.jpeg',
+  img: 'sulton-pic-square.jpg',
   paragraphOne:
     'My fullname is Muhammad Sulton Tauhid. Currently, I am at the final year of my undergraduate study at University of Indonesia majoring Computer Engineering.',
   paragraphTwo:
