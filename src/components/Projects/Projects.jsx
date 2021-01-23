@@ -1,6 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react';
 import Fade from 'react-reveal/Fade';
 import Tilt from 'react-tilt';
+import { Link } from 'react-scroll';
 import { Container, Row, Col } from 'react-bootstrap';
 import PortfolioContext from '../../context/context';
 import Title from '../Title/Title';
@@ -49,20 +50,25 @@ const Projects = () => {
                         </p>
                         <p className="mb-4">{info2 || ''}</p>
                       </div>
-                      <a
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="cta-btn cta-btn--hero"
-                        href={url || '#!'}
-                      >
-                        See Live
-                      </a>
-
+                      {url && (
+                        <a
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="cta-btn cta-btn--hero"
+                          href={url || '#!'}
+                        >
+                          See Live
+                        </a>
+                      )}
                       {repo && (
                         <a
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="cta-btn text-color-main"
+                          className={
+                            url === ''
+                              ? 'cta-btn cta-btn--source_code text-color-main'
+                              : 'cta-btn text-color-main'
+                          }
                           href={repo}
                         >
                           Source Code
@@ -110,6 +116,11 @@ const Projects = () => {
               </Row>
             );
           })}
+          <span className="d-flex mt-3 justify-content-center">
+            <Link className="cta-btn cta-btn--projects" to="footer" smooth duration={1000}>
+              Click here to next page
+            </Link>
+          </span>
         </div>
       </Container>
     </section>

@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import Loading from './Loading/Loading';
+import ScrollToTop from './ScrollToTop/ScrollToTop';
 import Hero from './Hero/Hero';
 import About from './About/About';
 import Projects from './Projects/Projects';
@@ -26,6 +28,10 @@ function App() {
 
   return (
     <PortfolioProvider value={{ hero, about, projects, contact, footer }}>
+      {/* Components */}
+      <Loading />
+      <ScrollToTop />
+      {/* Sections */}
       <Hero />
       <About />
       <Projects />

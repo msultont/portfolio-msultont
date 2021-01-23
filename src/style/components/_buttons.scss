@@ -71,7 +71,48 @@
 
   &:hover {
     color: $secondary-color;
+    cursor: pointer;
     text-decoration: none;
+
+    &::after {
+      width: 100%;
+    }
+  }
+}
+
+/* Projects Style */
+.cta-btn--projects {
+  font-size: 2.4rem;
+  background-image: linear-gradient(135deg, $primary-color 0%, $secondary-color 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  border-width: 2px;
+  border-style: solid;
+  border-image: linear-gradient(135deg, $primary-color 0%, $secondary-color 100%);
+  border-image-slice: 1;
+  cursor: pointer;
+  // Responsive Button hero style
+  @include respond(phone) {
+    background-image: none;
+    border: 2px solid $secondary-color;
+    -webkit-text-fill-color: $secondary-color;
+  }
+
+  &::after {
+    background-image: linear-gradient(135deg, $primary-color 0%, $secondary-color 100%);
+    // Responsive Button hero style
+    @include respond(phone) {
+      background-image: none;
+    }
+  }
+
+  &:hover {
+    -webkit-text-fill-color: $white-color;
+    text-decoration: none;
+    // Responsive Button hover hero style
+    @include respond(phone) {
+      -webkit-text-fill-color: $secondary-color;
+    }
 
     &::after {
       width: 100%;
@@ -82,4 +123,36 @@
 /* Arrow Button */
 .up i {
   color: #272727;
+}
+
+/* Source code button */
+.cta-btn--source_code {
+  padding: 0 !important;
+}
+
+/* Scroll to the top button */
+.sidebar-btns {
+  display: none;
+  position: fixed;
+  bottom: 50px;
+  right: 10%;
+  z-index: 99;
+  font-size: 1.125rem;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  color: white;
+  cursor: pointer;
+  padding: 0.9375rem;
+  border-radius: 0.25rem;
+  background-image: url("../images/arrow-up.svg");
+  background-repeat: no-repeat;
+  width: 50px;
+  height: 50px;
+  background-position: center;
+}
+#scroll-btn {
+  right: 15%;
+  background-image: url("../images/arrow-up.svg");
+  background-color: #FF6663;
 }
