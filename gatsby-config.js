@@ -1,5 +1,6 @@
 module.exports = {
   siteMetadata: {
+    title: 'Sulton | Personal Portfolio',
     siteUrl: `https://www.msultont.com`,
   },
   plugins: [
@@ -27,8 +28,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Gatsby Simplefolio`,
-        short_name: `Simplefolio`,
+        name: `Sulton | Personal Portfolio`,
+        short_name: `Sulton Portfolio`,
         start_url: `/`,
         background_color: `#fff`,
         theme_color: `#0195d8`,
