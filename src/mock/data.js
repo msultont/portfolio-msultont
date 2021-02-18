@@ -2,11 +2,13 @@ import { nanoid } from 'nanoid';
 
 // HEAD DATA
 export const headData = {
-  title: 'Sulton | Personal Portfolio', // e.g: 'Name | Developer'
+  title: 'Muhammad Sulton Tauhid', // e.g: 'Name | Developer'
   lang: 'en', // e.g: en, es, fr, jp
   description:
     "Sulton's Personal web portfolio. It includes who Sulton is as a person, his personal projects that has been finished and how to contact him via email. This web portfolio is all about him.", // e.g: Welcome to my website
   img: 'sulton-pic.jpg',
+  keywords:
+    'Muhammad Sulton Tauhid, msultont, Sulton Wibawa, Sulton, msulton55, teknik komputer universitas indonesia, website portfolio',
 };
 
 // HERO DATA

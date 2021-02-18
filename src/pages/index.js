@@ -6,7 +6,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import '../style/main.scss';
 
 export default () => {
-  const { title, lang, description } = headData;
+  const { title, lang, description, keywords } = headData;
 
   useEffect(() => {
     const scrollRestore = () => {
@@ -22,10 +22,7 @@ export default () => {
         <meta charSet="utf-8" />
         <title>{title || 'Gatsby Simplefolio'}</title>
         <html lang={lang || 'en'} />
-        <meta
-          name="keywords"
-          content="personal portfolio, sulton, muhammad sulton tauhid, sulton tauhid, muhammad sulton, sulton wibawa, web portfolio, software engineer, web developer, cto, direktur it, entrepreneur, wirausaha, programmer, bisnis, msultont, msulton55, universitas indonesia, ui, itb, its, cara membuat website portfolio, cara membuat website sederhana, belajar pemrograman website, belajar pemrograman dasar"
-        />
+        <meta name="keywords" content={keywords} />
         <meta
           name="google-site-verification"
           content="tQhencibPXS5AjPXpY4KCm1wzeu6tdu6Vx-tJCIIlxM"
