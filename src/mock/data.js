@@ -5,10 +5,10 @@ export const headData = {
   title: 'Muhammad Sulton Tauhid', // e.g: 'Name | Developer'
   lang: 'en', // e.g: en, es, fr, jp
   description:
-    "Sulton's Personal web portfolio. It includes who Sulton is as a person, his personal projects that has been finished and how to contact him via email. This web portfolio is all about him.", // e.g: Welcome to my website
+    'Muhammad Sulton Tauhid is a software engineer who interests in startup world and entrepreneur. His motto of life is an endless learner which keeps him forever learn to follow up the latest technology trend. This personal website portfolio is all about him.',
   img: 'sulton-pic.jpg',
   keywords:
-    'Muhammad Sulton Tauhid, msultont, Sulton Wibawa, Sulton, msulton55, teknik komputer universitas indonesia, website portfolio',
+    'Muhammad Sulton Tauhid, software engineer, startup and entrepreneur, technology trend, an endless learner, msultont, Sulton Wibawa, Sulton, msulton55, teknik komputer universitas indonesia, website portfolio',
 };
 
 // HERO DATA
