@@ -35,9 +35,9 @@ export default () => {
         <meta property="og:locale" content={lang} />
         <meta
           property="og:image"
-          content="https://www.facebook.com/photo/?fbid=10216494010214067&set=a.1344068053054"
+          content="https://scontent.fcgk29-1.fna.fbcdn.net/v/t1.0-9/122988051_10216494010254068_4424970493396844455_o.jpg?_nc_cat=106&ccb=3&_nc_sid=09cbfe&_nc_ohc=ae9HaUHApxIAX-liZTc&_nc_ht=scontent.fcgk29-1.fna&oh=2a3ff144fc0fdee1b1742633de371d39&oe=6056C556"
         />
-        <meta property="og:site_name" content="Sulton | Personal Portfolio" />
+        <meta property="og:site_name" content="Muhammad Sulton Tauhid" />
         <link rel="canonical" href="https://www.msultont.com" />
       </Helmet>
       <App />

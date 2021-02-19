@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: 'Sulton | Personal Portfolio',
+    title: 'Muhammad Sulton Tauhid',
     siteUrl: `https://www.msultont.com`,
   },
   plugins: [
@@ -28,8 +28,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Sulton | Personal Portfolio`,
-        short_name: `Sulton Portfolio`,
+        name: `Muhammad Sulton Tauhid`,
+        short_name: `Sulton`,
         start_url: `/`,
         background_color: `#fff`,
         theme_color: `#0195d8`,
