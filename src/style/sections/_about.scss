@@ -30,6 +30,7 @@
     &__image {
       display: flex;
       height: 100%;
+      margin-bottom: -120px;
       align-items: center;
       justify-content: center;
 
@@ -44,6 +45,7 @@
     &__info {
       display: flex;
       height: 100%;
+      width: 370px;
       justify-content: center;
       flex-direction: column;
 
@@ -51,8 +53,32 @@
         align-items: center;
       }
 
+      &-title {
+        margin: 0px;
+        font-size: $mid-font-size;
+        font-weight: bold;
+      }
+
+      &-stack {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-top: 20px;
+
+        &-title {
+          font-weight: 700;
+        }
+
+        &-list {
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+          justify-content: space-evenly;
+        }
+      }
+
       &-text {
-        text-align: left;
+        text-align: justify;
 
         @include respond(tab-port) {
           font-size: 1.5rem;
