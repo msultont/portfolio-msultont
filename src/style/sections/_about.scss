@@ -23,6 +23,17 @@
   }
 
   .about-wrapper {
+    @include respond(tab-land) {
+      display: flex;
+      flex-flow: column;
+      align-items: center;
+    }
+
+    @include respond(tab-port) {
+      flex-direction: column;
+      align-items: center;
+    }
+
     @include respond(phone) {
       padding-bottom: 5rem;
     }
@@ -30,12 +41,11 @@
     &__image {
       display: flex;
       height: 100%;
-      margin-bottom: -120px;
       align-items: center;
       justify-content: center;
 
       @include respond(tab-port) {
-        padding-bottom: 6.4rem;
+        padding-bottom: 4.4rem;
       }
       @include respond(tab-land) {
         height: 100%;
@@ -49,8 +59,12 @@
       justify-content: center;
       flex-direction: column;
 
+      @include respond(tab-land) {
+        width: auto;
+      }
+
       @include respond(phone) {
-        align-items: center;
+        display: contents;
       }
 
       &-title {
@@ -59,29 +73,11 @@
         font-weight: bold;
       }
 
-      &-stack {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        margin-top: 20px;
-
-        &-title {
-          font-weight: 700;
-        }
-
-        &-list {
-          display: flex;
-          flex-direction: row;
-          flex-wrap: wrap;
-          justify-content: space-evenly;
-        }
-      }
-
       &-text {
         text-align: justify;
 
-        @include respond(tab-port) {
-          font-size: 1.5rem;
+        @include respond(tab-land) {
+          font-size: 2.4rem;
           text-align: center;
         }
         @include respond(phone) {

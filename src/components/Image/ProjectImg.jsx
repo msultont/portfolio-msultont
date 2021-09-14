@@ -1,20 +1,47 @@
+/* eslint-disable no-nested-ternary */
 import React from 'react';
 import { StaticQuery, graphql } from 'gatsby';
 import PropTypes from 'prop-types';
 import Img from 'gatsby-image';
 
-const ProjectImg = ({ filename, alt }) => (
+const ProjectImg = ({ filename, alt, type }) => (
   <StaticQuery
     query={graphql`
       query {
-        images: allFile {
+        imagesBig: allFile {
           edges {
             node {
               relativePath
               name
               childImageSharp {
-                fluid(maxWidth: 1366) {
+                fluid(maxWidth: 1366, quality: 100) {
                   ...GatsbyImageSharpFluid
+                }
+              }
+            }
+          }
+        }
+        imagesSmall50: allFile {
+          edges {
+            node {
+              relativePath
+              name
+              childImageSharp {
+                fixed(width: 50, quality: 75) {
+                  ...GatsbyImageSharpFixed
+                }
+              }
+            }
+          }
+        }
+        imagesSmall20: allFile {
+          edges {
+            node {
+              relativePath
+              name
+              childImageSharp {
+                fixed(width: 25) {
+                  ...GatsbyImageSharpFixed
                 }
               }
             }
@@ -23,12 +50,22 @@ const ProjectImg = ({ filename, alt }) => (
       }
     `}
     render={(data) => {
-      const image = data.images.edges.find((n) => n.node.relativePath.includes(filename));
+      const image =
+        type === 'big'
+          ? data.imagesBig.edges.find((n) => n.node.relativePath.includes(filename))
+          : type === 'small50'
+          ? data.imagesSmall50.edges.find((n) => n.node.relativePath.includes(filename))
+          : data.imagesSmall20.edges.find((n) => n.node.relativePath.includes(filename));
 
       if (!image) return null;
 
-      const imageFluid = image.node.childImageSharp.fluid;
-      return <Img alt={alt} fluid={imageFluid} />;
+      const imageInput =
+        type === 'big' ? image.node.childImageSharp.fluid : image.node.childImageSharp.fixed;
+      return type === 'big' ? (
+        <Img alt={alt} fluid={imageInput} />
+      ) : (
+        <Img alt={alt} fixed={imageInput} />
+      );
     }}
   />
 );
@@ -36,6 +73,7 @@ const ProjectImg = ({ filename, alt }) => (
 ProjectImg.propTypes = {
   filename: PropTypes.string,
   alt: PropTypes.string,
+  type: PropTypes.string,
 };
 
 export default ProjectImg;

@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: 'Muhammad Sulton Tauhid',
+    title: 'Muhammad Sulton Tauhid - Fullstack software developer',
     siteUrl: `https://www.msultont.com`,
   },
   plugins: [

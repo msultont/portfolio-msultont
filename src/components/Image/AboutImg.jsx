@@ -3,31 +3,18 @@ import { StaticQuery, graphql } from 'gatsby';
 import PropTypes from 'prop-types';
 import Img from 'gatsby-image';
 
-const AboutImg = ({ filename, alt, type }) => {
+const AboutImg = ({ filename, alt }) => {
   return (
     <StaticQuery
       query={graphql`
         query {
-          imagesBig: allFile {
+          images: allFile {
             edges {
               node {
                 relativePath
                 name
                 childImageSharp {
-                  fixed(width: 350) {
-                    ...GatsbyImageSharpFixed
-                  }
-                }
-              }
-            }
-          }
-          imagesSmall: allFile {
-            edges {
-              node {
-                relativePath
-                name
-                childImageSharp {
-                  fixed(width: 50) {
+                  fixed(width: 350, quality: 100) {
                     ...GatsbyImageSharpFixed
                   }
                 }
@@ -37,15 +24,12 @@ const AboutImg = ({ filename, alt, type }) => {
         }
       `}
       render={(data) => {
-        const image =
-          type === 'big'
-            ? data.imagesBig.edges.find((n) => n.node.relativePath.includes(filename))
-            : data.imagesSmall.edges.find((n) => n.node.relativePath.includes(filename));
+        const image = data.images.edges.find((n) => n.node.relativePath.includes(filename));
 
         if (!image) return null;
 
         const imageFixed = image.node.childImageSharp.fixed;
-        return <Img className="rounded" alt={alt} fixed={imageFixed} />;
+        return <Img alt={alt} fixed={imageFixed} />;
       }}
     />
   );
@@ -54,7 +38,6 @@ const AboutImg = ({ filename, alt, type }) => {
 AboutImg.propTypes = {
   filename: PropTypes.string,
   alt: PropTypes.string,
-  type: PropTypes.string,
 };
 
 export default AboutImg;

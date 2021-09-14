@@ -48,9 +48,92 @@ export const projectsData = [
     id: nanoid(),
     img: 'sea-port-maps.jpeg',
     title: 'Sea Port Maps',
-    info:
-      'I developed java-based desktop application to calculate best sea-port route using Dijkstra Algorithm, fitness-function and SWT Map API to display the route map',
-    info2: '',
+    info: 'A Java based desktop application to calculate best sea-port route using dijkstra algorithm and fitness function',
+    projectDate: 'March 2020 - May 2020',
+    projectTech: [
+      {
+        alt: 'java',
+        techUrl: 'https://docs.oracle.com/javase/tutorial/uiswing/',
+        filename: 'java.png',
+      },
+      {
+        alt: 'google maps API',
+        techUrl: 'https://developers.google.com/maps',
+        filename: 'google-maps.png',
+      },
+    ],
+    url: '',
+    repo: '', // if no repo, the button will not show up
+  },
+  {
+    id: nanoid(),
+    img: ['SDTR-1.png', 'SDTR-2.png', 'SDTR-3.png'],
+    title: 'AJB Document Entity Recognition',
+    info: 'A React based website application integrated with machine learning model to recognize entity of AJB document using Python and utilize Google Vision API to extract text of AJB document',
+    projectDate: 'February 2021 - June 2021',
+    projectTech: [
+      {
+        alt: 'reactJS',
+        techUrl: 'https://reactjs.org/',
+        filename: 'react.png',
+      },
+      {
+        alt: 'nodeJS',
+        techUrl: 'https://nodejs.org/en/',
+        filename: 'node.png',
+      },
+      {
+        alt: 'python',
+        techUrl: 'https://www.python.org/',
+        filename: 'python.png',
+      },
+      {
+        alt: 'google cloud vision api',
+        techUrl: 'https://cloud.google.com/vision/docs/ocr',
+        filename: 'google-cloud.png',
+      },
+    ],
+    url: '',
+    repo: '', // if no repo, the button will not show up
+  },
+  {
+    id: nanoid(),
+    img: [
+      'seighneur-1.png',
+      'seighneur-2.png',
+      'seighneur-3.png',
+      'seighneur-4.png',
+      'seighneur-5.png',
+      'seighneur-6.png',
+      'seighneur-7.png',
+      'seighneur-8.png',
+      'seighneur-9.png',
+    ],
+    title: 'Seighneur Application',
+    info: 'Seighneur is an electron-desktop-based application built on website technology using React. This application is used to facilitate the inventory process of land assets',
+    projectDate: 'February 2021 - June 2021',
+    projectTech: [
+      {
+        alt: 'reactJS',
+        techUrl: 'https://reactjs.org/',
+        filename: 'react.png',
+      },
+      {
+        alt: 'electronJS',
+        techUrl: 'https://www.electronjs.org/',
+        filename: 'electron.png',
+      },
+      {
+        alt: 'nodeJS',
+        techUrl: 'https://nodejs.org/en/',
+        filename: 'node.png',
+      },
+      {
+        alt: 'mongodb',
+        techUrl: 'https://www.mongodb.com/',
+        filename: 'mongodb.png',
+      },
+    ],
     url: '',
     repo: '', // if no repo, the button will not show up
   },
@@ -58,7 +141,7 @@ export const projectsData = [
 
 // CONTACT DATA
 export const contactData = {
-  cta: 'Collaborate for project together? Mail me!',
+  cta: 'If you have anything in your mind, just mail me!',
   btn: 'Mail me',
   email: 'msulton55@gmail.com',
 };

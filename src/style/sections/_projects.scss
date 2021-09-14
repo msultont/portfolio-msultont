@@ -49,10 +49,14 @@
       & p > a {
         color: $secondary-color;
       }
+
+      &-techs {
+        display: flex;
+        align-items: center;
+      }
     }
 
     &__image {
-      width: 90%;
       margin: 0 auto;
 
       @include respond(tab-land) {

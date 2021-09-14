@@ -5,7 +5,7 @@ import { headData } from '../mock/data';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../style/main.scss';
 
-export default () => {
+const PageMain = () => {
   const { title, lang, description, keywords } = headData;
 
   useEffect(() => {
@@ -44,3 +44,4 @@ export default () => {
     </>
   );
 };
+export default PageMain;
