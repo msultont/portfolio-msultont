@@ -162,7 +162,12 @@ export const footerData = {
     {
       id: nanoid(),
       name: 'github',
-      url: 'https://github.com/msulton55',
+      url: 'https://github.com/msultont',
+    },
+    {
+      id: nanoid(),
+      name: 'envelope',
+      url: 'mailto:msulton55@gmail.com',
     },
   ],
 };

@@ -1,6 +1,5 @@
 import React, { useContext } from 'react';
 import { Container } from 'react-bootstrap';
-import { Link } from 'react-scroll';
 import PortfolioContext from '../../context/context';
 import GithubButtons from '../GithubButtons/GithubButtons';
 
@@ -33,7 +32,11 @@ const Footer = () => {
         </div>
         <hr />
         <p className="footer__text">
-          © {new Date().getFullYear()} - Template developed by{' '}
+          © {new Date().getFullYear()} - Portfolio developed by{' '}
+          <a href="https://github.com/msultont" target="_blank" rel="noopener noreferrer">
+            Sulton Wibawa
+          </a>{' '}
+          | Base template by{' '}
           <a href="https://github.com/cobidev" target="_blank" rel="noopener noreferrer">
             Jacobo Martínez
           </a>
