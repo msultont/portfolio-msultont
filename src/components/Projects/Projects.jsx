@@ -15,7 +15,7 @@ const Projects = () => {
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
-    if (window.innerWidth > 1024) {
+    if (window.innerWidth > 1366) {
       setIsDesktop(true);
       setIsMobile(false);
     } else {
@@ -167,7 +167,12 @@ const Projects = () => {
             );
           })}
           <span className="d-flex mt-3 justify-content-center">
-            <Link className="cta-btn cta-btn--projects" to="footer" smooth duration={1000}>
+            <Link
+              className="cta-btn cta-btn--projects"
+              to={isDesktop ? 'footer' : 'contact'}
+              smooth
+              duration={1000}
+            >
               Click here to next page
             </Link>
           </span>

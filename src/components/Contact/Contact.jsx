@@ -44,8 +44,8 @@ const Contact = () => {
               {cta || 'Would you like to work with me? Awesome!'}
             </p>
             <Container fluid>
-              <Row>
-                <Col md={4}>
+              <Row className="justify-content-center">
+                <Col xl={4} lg={5} md={5} sm={8}>
                   <div className="envelope-wrapper">
                     <div id="envelope" className={handlerEnvelope}>
                       <div className="front flap" />
@@ -59,7 +59,7 @@ const Contact = () => {
                     </div>
                   </div>
                 </Col>
-                <Col md={8}>
+                <Col xl={8} lg={11} md={11} sm={16}>
                   <Tilt options={{ max: 2, reset: true, scale: 1 }}>
                     <Form
                       noValidate

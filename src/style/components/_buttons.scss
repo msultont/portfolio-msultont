@@ -152,8 +152,17 @@
   height: 50px;
   background-position: center;
 }
+
 #scroll-btn {
   right: 15%;
   background-image: url("../images/arrow-up.svg");
   background-color: #FF6663;
+  transform: translateX(0px);
+  transition: transform 0.4s 0.6s ease;
+}
+
+.scroll-btn__footer {
+  transform: translateX(53px) !important;
+  transition: transform 0.4s 0.6s ease !important;
+  background-color: #FF6663 !important;
 }
