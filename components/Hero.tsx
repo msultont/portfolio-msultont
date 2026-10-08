@@ -1,5 +1,4 @@
 import { portfolioData } from '../data/portfolio';
-import Link from 'next/link';
 
 export default function Hero() {
   const { personal } = portfolioData;
@@ -7,11 +6,11 @@ export default function Hero() {
     <section className="pt-24 pb-16 sm:pt-32 sm:pb-24 lg:pb-32 px-4 mx-auto max-w-5xl">
       <div className="max-w-2xl">
         <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">
-          {personal.name}
+          <span className="block">{personal.name}</span>
+          <span className="mt-4 block text-xl font-medium text-gray-700 sm:text-2xl">
+            {personal.role} &amp; {personal.subRole}
+          </span>
         </h1>
-        <h2 className="mt-4 text-xl sm:text-2xl font-medium text-gray-700">
-          {personal.role} <span className="text-gray-400">/</span> {personal.subRole}
-        </h2>
         <p className="mt-6 text-lg leading-8 text-gray-600">
           {personal.headline}
         </p>

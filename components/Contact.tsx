@@ -6,7 +6,7 @@ export default function Contact() {
   return (
     <section id="contact" className="py-24 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center scroll-mt-16">
       <h2 className="text-3xl font-bold tracking-tight text-gray-900 mb-6">
-        Let&apos;s build something useful.
+        Contact Muhammad Sulton Tauhid
       </h2>
       <p className="text-lg text-gray-600 mb-10 max-w-2xl mx-auto">
         Open to software engineering opportunities and technical collaborations.
@@ -14,26 +14,12 @@ export default function Contact() {
       
       <div className="flex flex-wrap justify-center gap-4">
         <a
-          href={`mailto:${personal.contact.email}`}
-          className="rounded-md bg-gray-900 px-6 py-3 text-sm font-semibold text-white shadow-sm hover:bg-gray-800 transition-colors"
-        >
-          Email Me
-        </a>
-        <a
           href={personal.contact.linkedin}
           target="_blank"
           rel="noopener noreferrer"
           className="rounded-md bg-white px-6 py-3 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50 transition-colors"
         >
           LinkedIn
-        </a>
-        <a
-          href={personal.contact.github}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="rounded-md bg-white px-6 py-3 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50 transition-colors"
-        >
-          GitHub
         </a>
       </div>
       

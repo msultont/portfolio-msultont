@@ -30,7 +30,7 @@ export default function Process() {
       </div>
       
       <div className="mt-12 text-center text-sm text-gray-600 max-w-2xl mx-auto leading-relaxed">
-        Demonstrated experience translating user stories into structured SRS/SDD, designing ERDs and UI/UX flows, and leading Agile sprints to deliver production-ready MVPs.
+        Demonstrated experience translating requirements into SRS/SDD, designing ERDs and UI/UX flows, and leading Agile sprints to deliver MVPs ahead of schedule.
       </div>
     </section>
   );
